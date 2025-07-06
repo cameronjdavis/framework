@@ -24,7 +24,7 @@ class RoutesTest extends TestCase
     public static function getTestRouteMatch(): array
     {
         return [
-            ['abc', 'abc'],
+            ['abc', 'abc666'],
             ['abc-def', 'abc-def'],
             ['abc\/[1-9]\d*\/def', 'abc/123/def'],
             ['abc-def', 'abc-def'],
