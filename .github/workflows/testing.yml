@@ -10,4 +10,4 @@ jobs:
     - uses: php-actions/composer@v6
     - run: ./vendor/bin/phpcs --standard=PSR12 src tests
     - run: ./vendor/bin/phpstan analyse src tests --level 7
-    - run: ./vendor/bin/phpunit tests --do-not-cache-result --colors
+    - run: ./vendor/bin/phpunit tests --do-not-cache-result
