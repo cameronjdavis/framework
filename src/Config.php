@@ -1,9 +1,6 @@
 <?php
-
 namespace NetCamerond\Funwork;
-
-class Config
-{
+class Config{
     /**
      * @var array<string, mixed>
      */
