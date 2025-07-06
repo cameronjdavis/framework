@@ -4,6 +4,9 @@ namespace NetCamerond\Funwork;
 
 class Config
 {
+    /**
+     * @var array<string, mixed>
+     */
     protected array $config = [];
 
     /**
@@ -19,7 +22,10 @@ class Config
         return array_key_exists($configValueName, $this->config) ? $this->config[$configValueName] : $defaultValue;
     }
 
-    public function getAllConfig()
+    /**
+     * @return array<string, mixed>
+     */
+    public function getAllConfig(): array
     {
         return $this->config;
     }
