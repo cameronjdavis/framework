@@ -1,0 +1,19 @@
+{
+    "name": "net-camerond/funwork",
+    "description": "A simple framework just for me.",
+    "autoload": {
+        "psr-4": {
+            "NetCamerond\\Funwork\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NetCamerond\\Funwork\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12",
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "*"
+    }
+}

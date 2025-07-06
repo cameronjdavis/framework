@@ -1,0 +1,27 @@
+<?php
+
+use NetCamerond\Funwork\Config;
+use NetCamerond\Funwork\Route;
+use NetCamerond\Funwork\Routes;
+use NetCamerond\Funwork\Services;
+
+include_once(__DIR__ . '/vendor/autoload.php');
+
+$s = new Services();
+$s->addServices(include __DIR__ . '/services.php');
+
+$c = $s->getServiceSingleton(Config::class);
+$c->addConfig(include __DIR__ . '/config.php');
+
+$r = $s->getServiceSingleton(Routes::class);
+$r->addRoutes(array_map(fn($route): Route => new Route(
+    $route[Routes::KEY_REGEX],
+    $route[Routes::KEY_SERVICE_NAME],
+    $route[Routes::KEY_SERVICE_METHOD_NAME],
+    $route[Routes::KEY_REGEX_EXAMPLES] ?? [],
+), include __DIR__ . '/routes.php'));
+
+$route = $r->matchRouteAndGetRouteConfig($argv[1] ?? '');
+$service = $s->getServiceInstance($route->getServiceClassName());
+$method = $route->getServiceMethodName();
+$service->$method();
