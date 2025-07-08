@@ -8,9 +8,9 @@ class Executor
     protected Routes $routes;
 
     /**
-     * @param array<string, callable> $servicesArray 
-     * @param array<string> $configArray 
-     * @param array<array<mixed>> $routesArray 
+     * @param array<string, callable> $servicesArray
+     * @param array<string> $configArray
+     * @param array<array<mixed>> $routesArray
      */
     public function __construct(
         protected array $servicesArray,
