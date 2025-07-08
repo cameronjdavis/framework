@@ -1,9 +1,9 @@
 <?php
 
-use NetCamerond\Funwork\Config;
-use NetCamerond\Funwork\Route;
-use NetCamerond\Funwork\Routes;
-use NetCamerond\Funwork\Services;
+use NetCamerond\Framework\Config;
+use NetCamerond\Framework\Route;
+use NetCamerond\Framework\Routes;
+use NetCamerond\Framework\Services;
 
 include_once(__DIR__ . '/vendor/autoload.php');
 

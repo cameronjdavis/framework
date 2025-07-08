@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NetCamerond\Funwork\Tests\Unit;
+namespace NetCamerond\Framework\Tests\Unit;
 
-use NetCamerond\Funwork\Route;
+use NetCamerond\Framework\Route;
 use PHPUnit\Framework\TestCase;
-use NetCamerond\Funwork\Routes as Subject;
+use NetCamerond\Framework\Routes as Subject;
 use PHPUnit\Framework\Attributes\DataProvider;
 
 class RoutesTest extends TestCase

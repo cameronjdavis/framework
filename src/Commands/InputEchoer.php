@@ -1,6 +1,6 @@
 <?php
 
-namespace NetCamerond\Funwork\Commands;
+namespace NetCamerond\Framework\Commands;
 
 class InputEchoer
 {

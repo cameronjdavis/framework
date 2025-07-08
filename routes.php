@@ -1,9 +1,9 @@
 <?php
 
-use NetCamerond\Funwork\Commands\ConfigShower;
-use NetCamerond\Funwork\Commands\HelpShower;
-use NetCamerond\Funwork\Commands\InputEchoer;
-use NetCamerond\Funwork\Routes;
+use NetCamerond\Framework\Commands\ConfigShower;
+use NetCamerond\Framework\Commands\HelpShower;
+use NetCamerond\Framework\Commands\InputEchoer;
+use NetCamerond\Framework\Routes;
 
 return [
     [

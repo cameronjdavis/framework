@@ -1,8 +1,8 @@
 <?php
 
-namespace NetCamerond\Funwork\Commands;
+namespace NetCamerond\Framework\Commands;
 
-use NetCamerond\Funwork\Config;
+use NetCamerond\Framework\Config;
 
 class ConfigShower
 {

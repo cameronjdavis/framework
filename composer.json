@@ -1,14 +1,14 @@
 {
-    "name": "net-camerond/funwork",
+    "name": "cameronjdavis/framework",
     "description": "A simple framework just for me.",
     "autoload": {
         "psr-4": {
-            "NetCamerond\\Funwork\\": "src/"
+            "NetCamerond\\Framework\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NetCamerond\\Funwork\\Tests\\": "tests/"
+            "NetCamerond\\Framework\\Tests\\": "tests/"
         }
     },
     "require-dev": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NetCamerond\Funwork;
+namespace NetCamerond\Framework;
 
 class Routes
 {

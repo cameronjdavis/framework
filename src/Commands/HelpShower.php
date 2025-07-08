@@ -1,8 +1,8 @@
 <?php
 
-namespace NetCamerond\Funwork\Commands;
+namespace NetCamerond\Framework\Commands;
 
-use NetCamerond\Funwork\Routes;
+use NetCamerond\Framework\Routes;
 
 class HelpShower
 {

@@ -1,11 +1,11 @@
 <?php
 
-use NetCamerond\Funwork\Commands\ConfigShower;
-use NetCamerond\Funwork\Commands\HelpShower;
-use NetCamerond\Funwork\Commands\InputEchoer;
-use NetCamerond\Funwork\Config;
-use NetCamerond\Funwork\Routes;
-use NetCamerond\Funwork\Services;
+use NetCamerond\Framework\Commands\ConfigShower;
+use NetCamerond\Framework\Commands\HelpShower;
+use NetCamerond\Framework\Commands\InputEchoer;
+use NetCamerond\Framework\Config;
+use NetCamerond\Framework\Routes;
+use NetCamerond\Framework\Services;
 
 return [
     Routes::class => function(Services $s) {
