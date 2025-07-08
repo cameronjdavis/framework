@@ -14,10 +14,6 @@ class Routes
      */
     protected array $routes = [];
 
-    public function __construct()
-    {
-    }
-
     /**
      * @param array<Route> $routes
      */

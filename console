@@ -1,27 +1,9 @@
 <?php
 
-use NetCamerond\Framework\Config;
-use NetCamerond\Framework\Route;
-use NetCamerond\Framework\Routes;
-use NetCamerond\Framework\Services;
-
 include_once(__DIR__ . '/vendor/autoload.php');
 
-$s = new Services();
-$s->addServices(include __DIR__ . '/services.php');
-
-$c = $s->getServiceSingleton(Config::class);
-$c->addConfig(include __DIR__ . '/config.php');
-
-$r = $s->getServiceSingleton(Routes::class);
-$r->addRoutes(array_map(fn($route): Route => new Route(
-    $route[Routes::KEY_REGEX],
-    $route[Routes::KEY_SERVICE_NAME],
-    $route[Routes::KEY_SERVICE_METHOD_NAME],
-    $route[Routes::KEY_REGEX_EXAMPLES] ?? [],
-), include __DIR__ . '/routes.php'));
-
-$route = $r->matchRouteAndGetRouteConfig($argv[1] ?? '');
-$service = $s->getServiceInstance($route->getServiceClassName());
-$method = $route->getServiceMethodName();
-$service->$method();
+(new NetCamerond\Framework\Executor(
+    include __DIR__ . '/services.php',
+    include __DIR__ . '/config.php',
+    include __DIR__ . '/routes.php',
+))->execute($argv[1] ?? '');
