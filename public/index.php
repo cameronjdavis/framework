@@ -1,0 +1,10 @@
+<?php
+
+include_once(__DIR__ . '/../vendor/autoload.php');
+
+(new NetCamerond\Framework\Executor(
+    include __DIR__ . '/../services.php',
+    include __DIR__ . '/../config.php',
+    include __DIR__ . '/../routes.php',
+))->execute(substr($_SERVER["PATH_INFO"] ?? '', 1));
+?>

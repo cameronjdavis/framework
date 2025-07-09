@@ -19,6 +19,6 @@ return [
     },
     InputEchoer::class => function(Services $s) {
         global $argv;
-        return new InputEchoer($argv);
+        return new InputEchoer($argv ?? []);
     },
 ];
