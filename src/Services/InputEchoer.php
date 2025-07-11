@@ -8,7 +8,7 @@ class InputEchoer
      * @param array<string> $argv
      */
     public function __construct(
-        protected array $argv,  
+        protected array $argv,
     ) {
     }
 
