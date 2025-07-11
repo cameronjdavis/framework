@@ -1,8 +1,8 @@
 <?php
 
-use NetCamerond\Framework\Commands\ConfigShower;
-use NetCamerond\Framework\Commands\HelpShower;
-use NetCamerond\Framework\Commands\InputEchoer;
+use NetCamerond\Framework\Services\ConfigShower;
+use NetCamerond\Framework\Services\HelpShower;
+use NetCamerond\Framework\Services\InputEchoer;
 use NetCamerond\Framework\Routes;
 
 return [

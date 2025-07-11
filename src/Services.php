@@ -2,6 +2,8 @@
 
 namespace NetCamerond\Framework;
 
+use ReflectionClass;
+
 class Services
 {
     /**
@@ -28,9 +30,9 @@ class Services
         if (array_key_exists($serviceName, $this->services)) {
             $serviceCallback = $this->services[$serviceName];
             return $serviceCallback($this);
-        } else {
-            return new $serviceName();
         }
+
+        return null;
     }
 
     public function getServiceSingleton(string $serviceName): mixed

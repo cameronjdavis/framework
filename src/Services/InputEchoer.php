@@ -1,6 +1,6 @@
 <?php
 
-namespace NetCamerond\Framework\Commands;
+namespace NetCamerond\Framework\Services;
 
 class InputEchoer
 {
@@ -8,7 +8,7 @@ class InputEchoer
      * @param array<string> $argv
      */
     public function __construct(
-        protected array $argv,
+        protected array $argv,  
     ) {
     }
 

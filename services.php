@@ -1,13 +1,17 @@
 <?php
 
-use NetCamerond\Framework\Commands\ConfigShower;
-use NetCamerond\Framework\Commands\HelpShower;
-use NetCamerond\Framework\Commands\InputEchoer;
+use NetCamerond\Framework\Services\ConfigShower;
+use NetCamerond\Framework\Services\HelpShower;
+use NetCamerond\Framework\Services\InputEchoer;
 use NetCamerond\Framework\Config;
 use NetCamerond\Framework\Routes;
 use NetCamerond\Framework\Services;
+use NetCamerond\Framework\Services\HtmlHelpShower;
 
 return [
+    Config::class => function(Services $s) {
+        return new Config();
+    },
     Routes::class => function(Services $s) {
         return new Routes($s);
     },
@@ -20,5 +24,8 @@ return [
     InputEchoer::class => function(Services $s) {
         global $argv;
         return new InputEchoer($argv ?? []);
+    },
+    HtmlHelpShower::class => function(Services $s) {
+        return new HtmlHelpShower($s->getServiceSingleton(Routes::class));
     },
 ];

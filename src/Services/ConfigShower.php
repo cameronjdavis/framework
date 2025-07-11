@@ -1,6 +1,6 @@
 <?php
 
-namespace NetCamerond\Framework\Commands;
+namespace NetCamerond\Framework\Services;
 
 use NetCamerond\Framework\Config;
 
