@@ -19,7 +19,7 @@ return [
     [
         Routes::KEY_REGEX => 'example\/[1-9]\d*',
         Routes::KEY_SERVICE_NAME => InputEchoer::class,
-        Routes::KEY_SERVICE_METHOD_NAME => 'echoInput',
+        Routes::KEY_SERVICE_METHOD_NAME => 'echoConsoleInput',
         Routes::KEY_REGEX_EXAMPLES => [
             'example/9',
             'example/123',

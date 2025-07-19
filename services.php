@@ -23,7 +23,7 @@ return [
     },
     InputEchoer::class => function(Services $s) {
         global $argv;
-        return new InputEchoer($argv ?? []);
+        return new InputEchoer($argv ?? [], $_SERVER ?? []);
     },
     HtmlHelpShower::class => function(Services $s) {
         return new HtmlHelpShower($s->getServiceSingleton(Routes::class));
